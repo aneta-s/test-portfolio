@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Chango&family=Erica+One&family=Plaster&family=Poppins:wght@300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,700;0,800;0,900;1,700;1,900&display=swap"
+  rel="stylesheet"
+  />
+  <link rel="icon" type="image/ico" href="image/favicon.ico" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Aneta Stojanowska | UX/UI Designer</title>
+</head>
+<body>
+  <!-- Menu Overlay: add overlay, the dark sms through layer behind navigation, but infront main content -->
+  <div class="overlay overlay-slide-left" id="overlay">
+    <!-- Menu Items pointed to the right section id-->
+    <nav>
+      <ul>
+        <!-- Because slide-out- is transforming off the page, we don't see it when load page fro the first time -->
+        <li id="nav-1" class="slide-out-1"><a href="#about">About</a></li>
+        <li id="nav-2" class="slide-out-2"><a href="#project-one">Habitual</a></li>
+        <li id="nav-3" class="slide-out-3">
+          <a href="#project-two">Aegon</a>
+        </li>
+        <li id="nav-4" class="slide-out-4">
+          <a href="#project-three">UWV</a>
+        </li>
+        <li id="nav-5" class="slide-out-5">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Menu bars -->
+  <div class="menu-bars" id="menu-bars">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <!-- Sections -->
+  <section id="home">
+    <img src="image/logo.png" alt="Logo" class="logo" />
+  </section>
+  <div class="text-box" id="homecontent">
+    <h1 class="heading-primary">                                                                                                                                                    <span class="heading-primary-main">
+      Hello, I'm <strong> Aneta Stojanowska</strong></span
+      >
+      <!-- span is to style elements differently -->
+      <span class="heading-primary-sub">
+        a UX/UI/Motion Designer, based in the Netherlands.</span
+        >
+      </h1>
+      <!-- below: styles about the color in btn-white class, for buttons functionality use btn class-->
+      <a href="#project-one" class="btn btn-text">My Projects</a>
+    </div>
+    <!-- ABOUT ME PAGE -->
+    <main>
+      <section id="about">
+        <!-- utility class u-margin-8 let to stay independent/reusable across the page-->
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">About Me</h2>
+        </div>
+        <div class="container">
+          <div class="zone image">
+            <!-- style="margin:40px auto; text-align:center;" -->
+            <img
+            src="image/profile-foto.png"
+            alt="Profile Photo"
+            class="photo"
+            height="auto"
+            width="200px"
+            />
+          </div>
+          <div class="zone text">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Motion design
+            </h3>
+            <p class="paragraph">
+              I am a UX Designer with front-end skills and experience with mobile & web design. 
+I design interfaces and intuitive interactions for responsive websites, mobile apps and web applications in Figma through motion and subtle interactions.
+I have been designing for 5 years and freelancing for 2 years for IT, software and finance companies within agile teams. LEAN methodology is my way to quickly prototype, test and iterate to find the results that work best for my users. I style components in modern JavaScript frameworks and design systems.            </p>
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Design thinking
+            </h3>
+            <p class="paragraph">
+              As a person, I’m a problem solver and enjoy participating in design thinking sprints. In my spare time, I help design students with UX questions and motivate them to be successful designers.
+            </p>
+
+            <a href="assets/resume-uxui-designer.pdf" class="btn btn-text">Resume download</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section id="project-one">
+      <!-- of .active? -->
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">Projects</h2>
+      </div>
+
+      <div class="project-container">
+        <div class="zone text">
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            AI DRIVEN E-COMMERCE MOBILE APP.
+         </h3>
+
+         <div class="mobile-image">
+          <img
+          src="image/habitual-case.png"
+          alt="Profile Photo"
+          class="photo"
+          height="auto"
+          />
+        </div>
+        <p class="paragraph">
+          An online retailer that allows individuals and businesses to sell and display personalised products for online sales.
+        </p>
+        <p class="paragraph"> <strong> Skills performed: </strong>
+          Entrepreneurship, Motion Design, Modern Tools, Goal Conversion, Graphic Design, UX.
+        </p>
+        <div class="btns-group">
+          <a href="./project-one-description.html" class="btn btn-text">UX process</a>
+          <!--  <a href="#" class="btn btn-text">Prototype &rarr;</a> -->
+        </div>
+      </div>
+      <div class="area image desktop-img">
+        <img
+        src="image/habitual-case.png"
+        alt="Profile Photo"
+        class="photo"
+        height="auto"
+        />
+      </div>
+    </div>
+    
+
+    <div class="full-image">
+      <img
+      src="image/habitaul-main.png"
+      alt="Profile Photo"
+      class="photo"
+      height="auto"
+      />
+    </div>
+  </section>
+  <section id="project-two">
+    <!-- of .active? -->
+    <div class="project-container">
+      <div class="zone text">
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          INTERACTIVE DATA-DRIVEN PLATFORM OPTIMISATION (FINANCE), AEGON.
+       </h3>
+
+       <div class="mobile-image">
+        <img
+        src="image/aegon-case.png"
+        alt="Profile Photo"
+        class="photo"
+        height="auto"
+        />
+      </div>
+      <p class="paragraph">
+        Improving purchase process of a complex users’ pension tool. The goal is to simply, quickly, and conveniently calculate your pension.
+      </p>
+      <p class="paragraph"> <strong> Skills performed: </strong>
+        Goal Conversion, Graphic Design, UX, Shareholders Management.
+      </p>
+      <div class="btns-group">
+        <a href="./project-two-description.html" class="btn btn-text">UX process</a>
+        <!--         <a href="#" class="btn btn-text">Prototype &rarr;</a> -->
+      </div>
+    </div>
+    <div class="area image">
+      <img
+      src="image/aegon-case.png"
+      alt="Profile Photo"
+      class="photo"
+      height="auto"
+      width="400px"
+      />
+    </div>
+  </div>
+</section>
+<section id="project-three">
+  <div class="project-container">
+    <div class="zone text">
+      <h3 class="heading-tertiary u-margin-bottom-small">
+        UWV COMPLEX HOMEPAGE IMPROVEMENT.
+     </h3>
+
+     <div class="mobile-image">
+      <img
+      src="image/uwv-case.png"
+      alt="Profile Photo"
+      class="photo"
+      height="auto"
+      />
+    </div>
+    <p class="paragraph">
+      Helping unemployed people financially on conditions ensuring they seek work.
+    </p>
+    <p class="paragraph"> <strong> Skills performed: </strong>
+      Platform Development, Modern Tools, Goal Conversion, UX.
+    </p>
+
+    <div class="btns-group">
+      <a href="./project-three-description.html" class="btn btn-text">UX process</a>
+      <!--  <a href="#" class="btn btn-text">Prototype &rarr;</a> -->
+    </div>
+  </div>
+  <div class="area image desktop-img">
+    <img
+    src="image/uwv-case.png"
+    alt="Profile Photo"
+    class="photo"
+    height="auto"
+    />
+  </div>
+</div>
+
+
+<div class="full-image">
+  <img
+  src="image/uwv-main.png"
+  alt="Profile Photo"
+  class="photo"
+  height="auto"
+  />
+</div>
+</section>
+<!-- **** Contact Section **** -->
+<section id="contact">
+  <div class="u-center-text u-margin-bottom-big">
+    <h2 class="heading-secondary">Contact</h2>
+  </div>
+  <div class="text-box">
+    <h1 class="heading-primary">  <span class="heading-primary-main">
+      Strives to work in teams with other experts and find efficient solutions for customers with complex needs. Let’s do something amazing.
+    </h1>
+    <!-- below: styles about the color in btn-white class, for buttons functionality use btn class-->
+    <a href="mailto:a.stojanowska23@email.com" class="btn btn-text">Contact</a>
+  </div>
+  <div class="footer">
+   <a rel="noreferrer" href="#top" class="back-to-top">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+  </a>
+  <div class="social-links">
+    <a rel="noreferrer" href="https://anetastojanowska.medium.com/" target="_blank">
+      <i class="fa fa-medium fa-inverse"></i>
+    </a>
+    <a rel="noreferrer" href="https://www.linkedin.com/in/stojanowska/" target="_blank">
+      <i class="fa fa-linkedin fa-inverse"></i>
+    </a>
+    <a rel="noreferrer" href="https://github.com/aneta-s" target="_blank">
+      <i class="fa fa-github fa-inverse"></i>
+    </a>
+  </div>
+  <hr />
+  <p class="footer__text">
+    © 2022 - designed by
+    <a href="#about"> me</a>
+    
+  </p>
+</div>
+</section>
+<!-- <footer class="footer navbar-static-bottom">
+  <div class="container">
+    <a rel="noreferrer" href="#top" class="back-to-top">
+      <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+    </a>
+    <div class="social-links">
+      <a rel="noreferrer" href="#!" target="_blank">
+        <i class="fa fa-twitter fa-inverse"></i>
+      </a>
+      <a rel="noreferrer" href="#!" target="_blank">
+        <i class="fa fa-linkedin fa-inverse"></i>
+      </a>
+      <a rel="noreferrer" href="#!" target="_blank">
+        <i class="fa fa-github fa-inverse"></i>
+      </a>
+    </div>
+
+    <hr />
+    <p class="footer__text">
+      © 2022 - Text here
+      <a rel="noreferrer" href="https://github.com/aneta-s" target="_blank"
+        >More text here</a
+      >
+    </p>
+  </div>
+</footer> -->
+<!-- /END Footer Section -->
+
+<!-- /END Contact Section -->
+<!-- Script -->
+<script src="script.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/tilt.js"></script>
+</body>
+
+<script type="text/javascript">
+  $('.area.image img').tilt({
+    glare: true,
+    maxGlare: .1
+  })
+</script>
+
+</html>

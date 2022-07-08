@@ -1,0 +1,1256 @@
+/* --- Navigation Menu ------------------------------ */
+/* Overlay */
+/* $yellow-primary:#FFC608;
+$yellow-secondary: #FFF9E8;
+$black-primary:#191B13;
+$gray:#7b6828; */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.overlay {
+    /*scroll always there*/
+    position: fixed;
+    /* above everything else on our page*/
+    z-index: 9;
+    top: 0;
+    /* on the right corner*/
+    left: 0;
+    /* as wide as the screen*/
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(25, 27, 19, 0.25);
+    /*get the Navigation on the screen/off the screen. 
+      The Navigation is the child of the Overlay, work with .overlay
+        Full of the screen, off of the page. To change translateX(-100)from hidden to visible add below variation (4)
+    */
+    transform: translateX(-100vw);
+}
+
+/*4*/
+/*Show Navigation (is hidden yet) nice & slowly*/
+.overlay-slide-right {
+    transition: all 0.4s ease-in-out;
+    /*bring the Navigation back in the view*/
+    transform: translateX(0);
+}
+
+/*bring the Navigation out of the view. Restore to -100vw as it was initially*/
+.overlay-slide-left {
+    transition: all 0.8s ease-in-out;
+    /*bring the Navigation back out off the view*/
+    transform: translateX(-100vw);
+}
+
+/*to actually make the Navigation work (4) need to add and remove these classes to .overlay (JS file "Toggle: Menu Active")*/
+/*Slide In Animation of the NAV ITEMS with delay for each nav item https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+Below Class for each animations for each item in Navigation
+    linear means it moves at an even speed, with delay of 0.2s, both fills backwords and forwards. 
+*/
+.slide-in-1 {
+    animation: slide-in 0.4s linear 0.2s both;
+}
+
+/*delay is adjusted so thre is more delayed then the last by .2s more on each of them*/
+.slide-in-2 {
+    animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3 {
+    animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4 {
+    animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slide-in-5 {
+    animation: slide-in 0.4s linear 1s both;
+}
+
+/*The actual animation. @keyframes to dictate the animation sliding from the screen and off to the screen
+Below animation takes 0.4s and for each of the animation it launch .2s after the previous one*/
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        /*% it is not the parent element*/
+    }
+    to {
+        transform: translateX(0);
+        /*showing full navigation*/
+    }
+}
+
+/*do the opposite for Slide Out Animation, increate delay by.1s, set max of fill with 0.5s as it slide in increment by .1s*/
+.slide-out-1 {
+    animation: slide-out 0.3s linear 0.5s both;
+}
+
+/*delay is adjusted so there is more delayed then the last by .2s more on each of them*/
+.slide-out-2 {
+    animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-3 {
+    animation: slide-out 0.3s linear 0.3s both;
+}
+
+.slide-out-4 {
+    animation: slide-out 0.3s linear 0.2s both;
+}
+
+.slide-out-5 {
+    animation: slide-out 0.3s linear 0.1s both;
+}
+
+/*reverse keyframes*/
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        /*it starts on the page already*/
+    }
+    to {
+        transform: translateX(-100%);
+        /*animatie it off the page*/
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Raleway, sans-serif;
+    margin: 0;
+    background: #191B13;
+    /*update font family*/
+}
+
+.heading-primary {
+    color: #191B13;
+    backface-visibility: hidden;
+    margin-bottom: 4rem;
+}
+
+.heading-primary-main {
+    display: block;
+    font-weight: 400;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /*animation-delay: 3s;
+        animation-iteration-count: 3;
+        ease-in animation start slower, and ten axcellarate over time
+        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+        */
+}
+
+.heading-primary-sub {
+    display: block;
+    font-weight: 400;
+    animation: moveInRight 1s ease-out;
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    background-image: linear-gradient(to right, #DA3751, #ffc608);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.heading-secondary:hover {
+    transform: skewY(0) skewX(15deg);
+    text-shadow: 0.5rem 1rem 2rem rgba(25, 27, 19, 0.1);
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+}
+.paragraph:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.u-center-text {
+    text-align: center;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1.6rem;
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 3.2rem;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 6.4rem;
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 1;
+    border: 0.2rem solid #ffc608;
+    padding: 1.5rem 4rem;
+    cursor: pointer;
+}
+
+/* About, Projects, Contact Buttons on hover */
+.btn-text:hover,
+.btn-text:active {
+    background-position: 100%;
+    /* color: #ffffff; */
+    transform: translateX(1rem);
+}
+
+.zone > img {
+    box-shadow: 0 1.5rem 4rem rgba(25, 27, 19, 0.2);
+    border-radius: 50%;
+    z-index: none;
+    transition: all 0.2s;
+    outline-offset: 2rem;
+}
+.zone > img:hover {
+    outline: 1.5rem solid #e7d8fc;
+    transform: scale(1.05) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(25, 27, 19, 0.5);
+    z-index: 20;
+}
+.zone > img:hover .zone > img__photo:not(:hover) {
+    transform: scale(0.95);
+}
+
+.zone.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ADD HAMBURGER MENU TO SHOW/HIDE THE NAVIGATION TOGGLE ON/OFF*/
+/* --- Menu Bars  https://www.w3schools.com/howto/howto_css_menu_icon.asp ------------------------------------ */
+.menu-bars {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 10;
+    display: inline;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 3.5rem;
+    height: 0.2rem;
+    background-color: #191B13;
+    margin: 0.8rem 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar 
+    To turn on/off the bar, use .change class to show up the X, when off it is regular bar (JS file)
+*/
+.change .bar1 {
+    transform: rotate(-45deg) translate(-0.7rem, 0.8rem);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: rotate(45deg) translate(-0.6rem, -0.8rem);
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.project-container {
+    margin: 55px;
+    padding: 55px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+/* --- Heading------------------------------ */
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Nav Menu Items (parent of the Navigation)*/
+nav,
+nav ul {
+    /* width of the Menu Items full width*/
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* styling nav bar everything flow top-bottom & stretch */
+nav ul {
+    display: flex;
+    /* items top to bottom instad left to right*/
+    flex-direction: column;
+    /* stretch to fit the width of the page */
+    justify-content: stretch;
+    list-style: none;
+}
+
+/* add height to each item so they spread out to them full heigth all of those*/
+nav ul li {
+    /* use % instead of vh to be 20% height of the parent ( nav, nav ul height: 100vh;) which is already set up above*/
+    height: 20%;
+    /* don't stretch the page horizontal, don't want horizontal scrollbar after all*/
+    overflow: hidden;
+}
+
+/*style anker tag within Navigation*/
+nav li a {
+    /*centered within each of the boxes*/
+    position: relative;
+    /*45% of the way from the top, not 50% because the font takes some space too*/
+    top: 45%;
+    /*always use this color, we're not using the css variables*/
+    color: #191B13;
+    text-transform: uppercase;
+    /*seperate the letters withtin titles to look more unique*/
+    letter-spacing: 0.4rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/*add interactivity when hovering over the items*/
+nav li a:hover {
+    /*make our nav anker 10% bigger*/
+    transform: scale(1.1);
+}
+
+/*hightlight it to have animated effect*/
+/*add content before anker element, add line instead of text */
+nav li a::before {
+    content: "";
+    /*must be responsive*/
+    width: 25vw;
+    height: 0.1rem;
+    background-color: #191B13;
+    position: absolute;
+    /*kind of in the middle, but little bit higher, height of the line itself */
+    top: 47.5%;
+    /*start on the left side*/
+    left: 0;
+    /*1. by default the opacity is 0*/
+    opacity: 0;
+}
+
+nav li a:hover::before {
+    /*2. the opacity will be 1 if hovered over it*/
+    opacity: 1;
+}
+
+/*select each of nav elements using pseudo classes ":*/
+/*target 1st element*/
+nav li:nth-of-type(1) {
+    background-color: #f9f9f9;
+}
+
+nav li:nth-of-type(2) {
+    background-color: #d4f6fe;
+}
+
+nav li:nth-of-type(3) {
+    background-color: #fef1d6;
+}
+
+nav li:nth-of-type(4) {
+    background-color: #e7d8fc;
+}
+
+nav li:nth-of-type(5) {
+    background-color: #ffdac6;
+}
+
+/* --- Sections ------------------------------------ */
+section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-size: 0.8rem;
+    /*display: flex;*/
+    padding: 6rem;
+    /*justify-content: center;
+    align-items: center;*/
+    color: #191B13;
+}
+
+section#home {
+    background-color: #f9f9f9;
+}
+
+/* --- Logo + settings Home page------------------------------ Can use animation, when hover it */
+.logo {
+    height: 3.5rem;
+}
+
+/* .logo:hover {
+  animation: moveInRight 1s ease-out; } */
+
+section#home a {
+    position: absolute;
+    z-index: 2;
+    top: 1.5rem;
+    left: 1.5rem;
+    text-decoration: none;
+    /*font-size: 0.8rem;*/
+    padding-bottom: 0.5rem;
+    color: #191B13;
+    border-bottom: 1px solid #191B13;
+}
+
+section#about {
+    background-color: #f9f9f9;
+    height: auto;
+}
+
+section#project-one {
+    background-color: #d4f6fe;
+    height: auto;
+    padding-bottom: 0;
+}
+
+section#project-two {
+    background-color: #fef1d6;
+    height: auto;
+    padding: 190px 0;
+}
+
+section#project-three {
+    background-color: #e7d8fc;
+    height: auto;
+    padding-bottom: 0;
+}
+
+section#contact {
+    background-color: #ffdac6;
+}
+
+/* Positioning of the whole footer*/
+.footer {
+    color: #f9f9f9;
+    padding: 12.8rem 0;
+    text-align: center;
+}
+.footer__text {
+    color: #191B13;
+    font-size: 1.2rem;
+}
+.footer__text a {
+    color: #191B13;
+    font-size: 1.2rem;
+    transition: all 0.4s;
+    display: inline-block;
+}
+.footer__text a:hover,
+.footer__text a:active {
+    color: #191B13;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+/* Positioning of the hr tag */
+.footer > hr {
+    margin: 1rem auto;
+    border: 0;
+    width: 15%;
+    border-top: 1px solid #191B13;
+}
+.footer .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer .social-links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #191B13;
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 1.6rem 1.6rem;
+    transition: all 0.2s ease-in;
+}
+.footer .social-links a:hover {
+    transform: translateY(-2px);
+}
+.footer .back-to-top i {
+    color: #191B13;
+    margin: 1rem 0 1.6rem;
+    transition: all 0.2s ease-in;
+}
+.footer .back-to-top i:hover {
+    transform: translateY(-2px);
+}
+
+section#about {
+    background-color: #f9f9f9;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media (max-width: 600px) {
+    section#home a {
+        top: 1rem;
+        left: 1rem;
+    }
+    .menu-bars {
+        top: 0.5rem;
+        right: 1rem;
+    }
+}
+
+/*Custom Styles*/
+
+.text-box .heading-primary {
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+    text-align: left;
+}
+
+.text-box {
+    text-align: left;
+    width: 70%;
+}
+
+.text-box .heading-primary strong {
+    background-image: linear-gradient(135deg, #DA3751, #ffc608);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#homecontent .btn:link,
+.btn:visited {
+    background-image: linear-gradient(to right, #DA3751, #ffc608);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 0.2rem solid #00000000;
+    border-image: linear-gradient(to right, #DA3751, #ffc608); 
+    border-image-slice: 1;
+}
+
+#homecontent .btn {
+    background: linear-gradient(to right, #DA3751, #ffc608); 
+    border: 0.2rem solid #ff8008;
+    -webkit-text-fill-color: #fff;
+
+}
+
+#homecontent .btn:hover {
+    -webkit-text-fill-color: #fff;
+    background: linear-gradient(to right, #DA3751, #ffc608); 
+    /* border: 0.2rem solid #ff8008; */
+    transform: translateX(0);
+}
+
+.text-box .heading-primary-main,
+.text-box .heading-primary-sub {
+    font-weight: bold;
+}
+
+section#home {
+    background-color: #fff;
+}
+
+.menu-bars {
+    top: 3rem;
+}
+
+.logo {
+    position: absolute;
+    top: 3rem;
+}
+
+body {
+    background: #ffff;
+    overflow-x: hidden;
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+}
+
+.heading-secondary {
+    background-image: linear-gradient(135deg, #DA3751, #ffc608);
+}
+
+section#about {
+    background-color: #ffc608;
+}
+
+/*#about .heading-secondary,
+#about .u-margin-bottom-small,
+#about .paragraph,
+#about .btn-text,
+#contact .heading-secondary  {
+  color: #fff;
+} */
+
+#about .zone.image {
+    /*  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;*/
+}
+/* About button */
+#about .btn:link,
+#about .btn:visited {
+    border: 0.2rem solid #000;
+    color: #000;
+}
+
+#about .paragraph {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+#about .heading-secondary,
+#contact .heading-secondary {
+    background-image: linear-gradient(135deg, #DA3751, #ffc608);
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+#about .container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#about .zone.image {
+    margin-right: 7.5rem;
+    max-width: 36%;
+    flex: 0 0 36%;
+    justify-content: flex-end;
+        position: relative;
+    left: 70px;
+}
+
+#about .zone.text {
+    max-width: 40%;
+    flex: 0 0 40%;
+    margin-left: 14rem;
+}
+
+#about .u-margin-bottom-small {
+    font-size: 2.2rem;
+}
+
+#contact {
+    padding: 15rem 0 10rem;
+    margin-top: -10rem;
+    margin-bottom: -0.1rem;
+    color: #fff;
+}
+
+/* Contact button */
+#contact .btn:link,
+.btn:visited {
+    border: 0.2rem solid #000;
+    color: #000;
+}
+
+.footer .back-to-top i {
+    color: #000;
+    font-size: 4rem;
+}
+
+.footer .social-links a {
+    text-decoration: none;
+}
+
+.footer__text {
+    color: #191B13;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer__text a {
+    color: #191B13;
+}
+
+.footer {
+    margin-top: 3.5rem;
+    padding-bottom: 0;
+}
+
+.btn-text {
+    color: #fff;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
+    background-size: 220%;
+    transition: all 0.4s;
+}
+
+.fa-inverse {
+    color: #191B13;
+}
+
+.btns-group .btn-text {
+    margin-right: 1.5rem;
+}
+
+#contact {
+    margin-top: 0;
+}
+
+#contact .u-center-text {
+    margin-bottom: 3rem;
+}
+
+#contact .text-box {
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: unset;
+}
+
+#contact .text-box .heading-primary-main {
+    font-size: 4rem;
+    line-height: 5rem;
+    font-weight: 400;
+}
+
+nav li a {
+    font-size: 20px;
+}
+
+/*Project Page Styling*/
+
+.project section {
+    width: auto;
+    height: auto;
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    gap: unset;
+    margin: 5.5rem;
+    padding-bottom: 0;
+}
+
+.project-container .area.image {
+    max-width: 55%;
+    /* flex: 0 0 55%;
+    position: relative; */
+}
+
+.project-container .zone.text {
+    max-width: 40%;
+    flex: 0 0 40%;
+}
+
+.project .project-container .zone.text {
+    max-width: 41%;
+    flex: 0 0 41%;
+    margin-bottom: 30px;
+}
+
+.project-container .area.image img  {
+    width: 100%;
+    /*  box-shadow: 0 0.6rem 1rem rgb(0 0 0 / 8%), 0 0 0.6rem rgb(0 0 0 / 5%);*/
+    transition: transform 0.5s cubic-bezier(0.155, 1.105, 0.295, 1.12), box-shadow 0.5s;
+}
+
+.project-container .zone.text .heading-tertiary {
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.project-container .zone.text .paragraph {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+/* Buttons Projects to UX process */
+
+.project-container .btn:link,
+.btn:visited {
+    /* border: 0.2rem solid #ff8008; */
+    background-image: linear-gradient(to right, #DA3751, #ffc608);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 0.2rem solid #00000000;
+    border-image: linear-gradient(to right, #DA3751, #ffc608); 
+    border-image-slice: 1;
+}
+
+.project-container .btn-text {
+    /* transition: all 0.4s; */
+    border-color: #ff8008;
+
+    /*     transition: all 0.4s;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
+    background-size: 220%;
+    border: 0.2rem solid #ff8008;
+    -webkit-text-fill-color: #fff; */
+}
+
+/* Button Projects txt color */
+.project-container .btn-text:hover {
+    /* transition: all 0.4s;
+    border-color: #ff8008;
+    transform: translateX(0); */
+    -webkit-text-fill-color: #fff;
+    background: linear-gradient(to right, #DA3751, #ffc608); 
+        transition: all 0.4s;
+
+    
+        transform: translateX(0);
+
+} 
+
+.project .project-container .area.image {
+    margin-top: 20px;
+}
+
+.project-container .zone.text .heading-tertiary {
+    margin-top: -10px;
+}
+.fa-inverse {
+    color: #000 !important;
+}
+.project-container .mobile-image {
+    display: none;
+}
+
+.full-image img {
+    width: 100%;
+}
+
+.full-image {
+    margin: 0 5.5rem 0;
+    padding: 0 0.5rem 0;
+    position: relative;
+    top: 5px;
+}
+
+#project-two .project-container .area.image {
+position: absolute;
+    right: -145px;
+    max-width: 55%;
+    flex: 0 0 55%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project #project-two .project-container .area.image {
+    position: relative;
+    right: 0;
+    max-width: 55%;
+    flex: 0 0 55%;
+    top: 0;
+    transform: translateY(0);
+}
+
+.project section#project-two {
+    padding: 6rem 6rem 0;
+}
+.project #project-two .project-container {
+    margin-bottom: 0;
+}
+
+
+    #project-two .project-container .zone.text {
+        margin-left: 60px;
+        max-width: 45%;
+        flex: 0 0 45%;
+    }
+
+
+
+.project #project-two .project-container .zone.text {
+        max-width: 41%;
+        margin-left: 0px;
+    flex: 0 0 41%;
+}
+@media (max-width: 1200px) {
+  #about .zone.image {
+    left: 0;
+  }
+    .project-container .area.image {
+        max-width: 40%;
+        flex: 0 0 40%;
+        position: relative;
+    }
+
+    .project-container .zone.text {
+        max-width: 60%;
+        flex: 0 0 60%;
+    }
+
+    .project-container .zone.text .heading-tertiary {
+        font-size: 2rem;
+    }
+
+    .project-container .zone.text .paragraph {
+        font-size: 1.5rem;
+    }
+
+    #about .paragraph {
+        font-size: 15px;
+    }
+
+    #about .u-margin-bottom-small {
+        font-size: 20px;
+    }
+
+    #contact .text-box .heading-primary-main {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .project-container .area.image {
+        max-width: 55%;
+        flex: 0 0 55%;
+    }
+
+    #project-two .project-container .area.image {
+        right: -95px;
+        max-width: 55%;
+        flex: 0 0 55%;
+    }
+
+    #about .zone.image {
+        margin-right: 3rem;
+    }
+
+    #about .zone.text {
+        max-width: calc(60% - 80px);
+        flex: 0 0 calc(60% - 80px);
+        margin-left: 8rem;
+    }
+    .project #project-two .project-container .zone.text {
+        margin-left: 0;
+        max-width: 41%;
+        flex: 0 0 41%;
+    }
+}
+
+@media (max-width: 1025px) {
+    section#project-two {
+        overflow-x: hidden;
+    }
+
+    .project .project-container {
+        margin: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 5rem 1.5rem;
+        height: auto;
+    }
+
+    .text-box {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    #about .container {
+        display: block;
+        margin-top: 3rem;
+    }
+
+    #about .zone.text,
+    #about .zone.image {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    #about .zone.text {
+        margin-left: 0;
+    }
+
+    #about .zone.image {
+        margin-right: 0;
+    }
+
+    #about .zone.image {
+        justify-content: center;
+    }
+
+    .project-container {
+        padding: 0;
+        margin: 0;
+        gap: unset;
+        display: block;
+    }
+
+    .project .project-container {
+        margin-bottom: 4rem;
+    }
+
+    .project-container .btn-text {
+        padding: 1.2rem 2rem;
+    }
+
+    .project-container .zone.text {
+        margin-bottom: 3rem;
+    }
+
+    .project-container .zone.text .heading-tertiary {
+        margin-top: 0;
+    }
+
+    .project-container .zone.text,
+    .project .project-container .zone.text,
+    #project-two .project-container .zone.text,
+    .project #project-two .project-container .zone.text {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .project-container .area.image {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .project-container .area.image.desktop-img {
+        display: none;
+    }
+
+    .full-image {
+        margin: 0;
+        padding: 0;
+    }
+
+    #project-two .project-container .mobile-image {
+        margin: 50px 0;
+    }
+
+    .project section#project-two {
+        padding: 5rem 1.5rem 0;
+    }
+
+    .project #project-two .project-container .area.image {
+        display: block;
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+
+    .btns-group {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .btns-group > .btn {
+        margin-right: 0.8rem;
+    }
+
+    .project-container .mobile-image {
+        display: block;
+    }
+
+    .project-container .mobile-image img {
+        width: 100%;
+    }
+
+    #contact .text-box,
+    #contact .footer {
+        position: relative;
+        left: 0;
+        right: 0;
+        transform: unset;
+    }
+
+    #contact .footer {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .u-margin-bottom-big {
+        margin-bottom: 0;
+    }
+
+    #contact {
+        padding-bottom: 0;
+        margin-top: 0;
+        padding-top: 5rem;
+    }
+
+    #contact .heading-primary {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+    #contact .text-box {
+        text-align: center;
+    }
+
+    .footer__text {
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+
+    section#home {
+        height: 100vh;
+    }
+
+    section#project-three {
+        padding-bottom: 0;
+    }
+
+    #contact .heading-secondary {
+        margin-top: 0;
+    }
+
+    #homecontent {
+        text-align: center;
+    }
+
+    #homecontent.text-box .heading-primary {
+        font-size: 3.5rem;
+        text-align: center;
+        line-height: 5rem;
+    }
+
+    .menu-bars {
+        right: 2.5rem;
+    }
+
+    #about .zone.image {
+        margin-bottom: 6rem;
+    }
+
+    #contact .text-box .heading-primary-main {
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+    }
+
+    #contact .u-center-text {
+        margin-bottom: 0;
+    }
+
+    .project .project1 {
+        padding-bottom: 3rem;
+    }
+
+    nav li a {
+        font-size: 1.6rem;
+    }
+
+    .heading-secondary {
+        font-size: 2.8rem;
+    }
+
+    #project-two .project-container .area.image {
+        display: none;
+    }
+
+    section#project-two {
+        padding: 5rem 1.5rem;
+    }
+}
+
+.project #contact .footer {
+    margin-top: 0;
+    color: #f9f9f9;
+    padding: 4.8rem 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: unset;
+    text-align: center;
+}
+
+.project #contact {
+    height: auto;
+    margin-top: 0;
+    padding: 0;
+}
+
+.project1 .u-center-text {
+    padding-top: 6rem;
+}
+
+#contact.project1 {
+    justify-content: center;
+    background-color: #d4f6fe;
+}
+
+#contact.project2 {
+    background-color: #fef1d6;
+}
+
+#contact.project3 {
+    background-color: #e7d8fc;
+}
+
+.back-to-top {
+    margin: 2rem 3rem;
+    text-decoration: none;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
