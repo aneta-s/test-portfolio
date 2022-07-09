@@ -156,6 +156,10 @@ body {
     /*update font family*/
 }
 
+a {
+    text-decoration: none;
+}
+
 .heading-primary {
     color: #191B13;
     backface-visibility: hidden;
@@ -224,7 +228,7 @@ body {
     margin-bottom: 6.4rem;
 }
 
-.btn:link,
+/* .btn:link,
 .btn:visited {
     display: inline-block;
     position: relative;
@@ -235,15 +239,7 @@ body {
     border: 0.2rem solid #ffc608;
     padding: 1.5rem 4rem;
     cursor: pointer;
-}
-
-/* About, Projects, Contact Buttons on hover */
-.btn-text:hover,
-.btn-text:active {
-    background-position: 100%;
-    /* color: #ffffff; */
-    transform: translateX(1rem);
-}
+} */
 
 .zone > img {
     box-shadow: 0 1.5rem 4rem rgba(25, 27, 19, 0.2);
@@ -580,7 +576,38 @@ section#about {
     -webkit-text-fill-color: transparent;
 }
 
-#homecontent .btn:link,
+.btn {
+    display: inline-block;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 1;
+    border: 0.2rem solid #ffc608;
+    padding: 1.5rem 4rem;
+    cursor: pointer;
+    color: #000;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
+    background-size: 220%;
+    transition: all 0.4s;
+}
+
+/* About, Projects, Contact Buttons on hover */
+ .btn:hover,
+.btn:active {
+    background-position: 100%;
+    color: #ffffff;
+    transform: translateX(1rem);
+} 
+/* .btn-text {
+    color: #fff;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
+    background-size: 220%;
+    transition: all 0.4s;
+} */
+
+
+/* #homecontent .btn:link,
 .btn:visited {
     background-image: linear-gradient(to right, #DA3751, #ffc608);
     -webkit-background-clip: text;
@@ -588,21 +615,21 @@ section#about {
     border: 0.2rem solid #00000000;
     border-image: linear-gradient(to right, #DA3751, #ffc608); 
     border-image-slice: 1;
-}
+} */
 
-#homecontent .btn {
+/* #homecontent .btn {
     background: linear-gradient(to right, #DA3751, #ffc608); 
     border: 0.2rem solid #ff8008;
     -webkit-text-fill-color: #fff;
 
-}
+} */
 
-#homecontent .btn:hover {
+/* #homecontent .btn:hover {
     -webkit-text-fill-color: #fff;
     background: linear-gradient(to right, #DA3751, #ffc608); 
-    /* border: 0.2rem solid #ff8008; */
+    /* border: 0.2rem solid #ff8008; *
     transform: translateX(0);
-}
+} */
 
 .text-box .heading-primary-main,
 .text-box .heading-primary-sub {
@@ -627,11 +654,6 @@ body {
     overflow-x: hidden;
 }
 
-.btn:link,
-.btn:visited {
-    text-decoration: none;
-}
-
 .heading-secondary {
     background-image: linear-gradient(135deg, #DA3751, #ffc608);
 }
@@ -640,7 +662,7 @@ section#about {
     background-color: #ffc608;
 }
 
-/*#about .heading-secondary,
+/* #about .heading-secondary,
 #about .u-margin-bottom-small,
 #about .paragraph,
 #about .btn-text,
@@ -704,11 +726,12 @@ section#about {
 }
 
 /* Contact button */
-#contact .btn:link,
+/* #contact .btn:link,
 .btn:visited {
     border: 0.2rem solid #000;
     color: #000;
-}
+} */
+
 
 .footer .back-to-top i {
     color: #000;
@@ -734,20 +757,13 @@ section#about {
     padding-bottom: 0;
 }
 
-.btn-text {
-    color: #fff;
-    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
-    background-size: 220%;
-    transition: all 0.4s;
-}
-
 .fa-inverse {
     color: #191B13;
 }
 
-.btns-group .btn-text {
+/* .btns-group .btn-text {
     margin-right: 1.5rem;
-}
+} */
 
 #contact {
     margin-top: 0;
@@ -829,41 +845,39 @@ nav li a {
 
 /* Buttons Projects to UX process */
 
-.project-container .btn:link,
+/* .project-container .btn:link,
 .btn:visited {
-    /* border: 0.2rem solid #ff8008; */
+    /* border: 0.2rem solid #ff8008; *
     background-image: linear-gradient(to right, #DA3751, #ffc608);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 0.2rem solid #00000000;
     border-image: linear-gradient(to right, #DA3751, #ffc608); 
     border-image-slice: 1;
-}
+} */
 
-.project-container .btn-text {
+/* .project-container .btn-text { */
     /* transition: all 0.4s; */
-    border-color: #ff8008;
+    /* border-color: #ff8008; */
 
     /*     transition: all 0.4s;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
     background-size: 220%;
     border: 0.2rem solid #ff8008;
     -webkit-text-fill-color: #fff; */
-}
+/* } */
 
 /* Button Projects txt color */
-.project-container .btn-text:hover {
-    /* transition: all 0.4s;
+/* .project-container .btn-text:hover {
+     transition: all 0.4s;
     border-color: #ff8008;
-    transform: translateX(0); */
+    transform: translateX(0); 
     -webkit-text-fill-color: #fff;
     background: linear-gradient(to right, #DA3751, #ffc608); 
-        transition: all 0.4s;
-
     
-        transform: translateX(0);
+    transform: translateX(0);
 
-} 
+}   */
 
 .project .project-container .area.image {
     margin-top: 20px;
@@ -1047,9 +1061,9 @@ position: absolute;
         margin-bottom: 4rem;
     }
 
-    .project-container .btn-text {
+    /* .project-container .btn-text {
         padding: 1.2rem 2rem;
-    }
+    } */
 
     .project-container .zone.text {
         margin-bottom: 3rem;
