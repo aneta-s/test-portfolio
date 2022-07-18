@@ -408,7 +408,6 @@ nav li:nth-of-type(5) {
 /* --- Sections ------------------------------------ */
 section {
     width: 100vw;
-    height: 100vh;
     position: relative;
     font-size: 0.8rem;
     /*display: flex;*/
@@ -420,6 +419,7 @@ section {
 
 section#home {
     background-color: #f9f9f9;
+    height: 100vh;
 }
 
 /* --- Logo + settings Home page------------------------------ Can use animation, when hover it */
@@ -472,7 +472,6 @@ section#contact {
 /* Positioning of the whole footer*/
 .footer {
     color: #f9f9f9;
-    padding: 12.8rem 0;
     text-align: center;
 }
 .footer__text {
@@ -580,7 +579,7 @@ section#about {
 .btn1 {
     border: 0.2rem solid #ffc608;
     color: #000;
-    background-image: linear-gradient(-120deg, transparent 0%, transparent 50%, #ff8008 50%);
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
     background-size: 220%;
 }
 
@@ -618,9 +617,9 @@ section#about {
     font-weight: bold;
 }
 
-section#home {
+/* section#home {
     background-color: #fff;
-}
+} */
 
 .menu-bars {
     top: 3rem;
@@ -755,7 +754,7 @@ section#about {
     margin-bottom: 3rem;
 }
 
-#contact .text-box {
+ #contact .text-box {
     margin: 0 auto;
     position: relative;
     top: 0;
@@ -965,7 +964,6 @@ position: absolute;
 @media (max-width: 992px) {
     section {
         padding: 5rem 1.5rem;
-        height: auto;
     }
 
     .text-box {
