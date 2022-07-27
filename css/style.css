@@ -228,19 +228,6 @@ a {
     margin-bottom: 6.4rem;
 }
 
-/* .btn:link,
-.btn:visited {
-    display: inline-block;
-    position: relative;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1;
-    z-index: 1;
-    border: 0.2rem solid #ffc608;
-    padding: 1.5rem 4rem;
-    cursor: pointer;
-} */
-
 .zone > img {
     box-shadow: 0 1.5rem 4rem rgba(25, 27, 19, 0.2);
     border-radius: 50%;
@@ -421,7 +408,6 @@ nav li:nth-of-type(5) {
 /* --- Sections ------------------------------------ */
 section {
     width: 100vw;
-    height: 100vh;
     position: relative;
     font-size: 0.8rem;
     /*display: flex;*/
@@ -433,6 +419,7 @@ section {
 
 section#home {
     background-color: #f9f9f9;
+    height: 100vh;
 }
 
 /* --- Logo + settings Home page------------------------------ Can use animation, when hover it */
@@ -485,7 +472,6 @@ section#contact {
 /* Positioning of the whole footer*/
 .footer {
     color: #f9f9f9;
-    padding: 12.8rem 0;
     text-align: center;
 }
 .footer__text {
@@ -576,6 +562,7 @@ section#about {
     -webkit-text-fill-color: transparent;
 }
 
+/* General Btn style */
 .btn {
     display: inline-block;
     position: relative;
@@ -583,62 +570,56 @@ section#about {
     font-weight: 700;
     line-height: 1;
     z-index: 1;
-    border: 0.2rem solid #ffc608;
     padding: 1.5rem 4rem;
     cursor: pointer;
-    color: #000;
-    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
-    background-size: 220%;
     transition: all 0.4s;
 }
 
-/* About, Projects, Contact Buttons on hover */
- .btn:hover,
-.btn:active {
+/* About & Contact Buttons style */
+.btn1 {
+    border: 0.2rem solid #ffc608;
+    color: #000;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
+    background-size: 220%;
+}
+
+/* About & Contact Buttons on hover */
+.btn1:hover,
+.btn1:active {
     background-position: 100%;
     color: #ffffff;
     transform: translateX(1rem);
 } 
-/* .btn-text {
-    color: #fff;
-    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
-    background-size: 220%;
-    transition: all 0.4s;
-} */
 
-
-/* #homecontent .btn:link,
-.btn:visited {
+/* Hero & Projects to UX process */
+.btn2 {
     background-image: linear-gradient(to right, #DA3751, #ffc608);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 0.2rem solid #00000000;
     border-image: linear-gradient(to right, #DA3751, #ffc608); 
     border-image-slice: 1;
-} */
 
-/* #homecontent .btn {
+}
+
+/* Hero & Projects to UX process Buttons on hover */
+.btn2:hover,
+.btn2:active {
+    background-position: 100%;
+    border-color: #ff8008;
     background: linear-gradient(to right, #DA3751, #ffc608); 
-    border: 0.2rem solid #ff8008;
     -webkit-text-fill-color: #fff;
-
-} */
-
-/* #homecontent .btn:hover {
-    -webkit-text-fill-color: #fff;
-    background: linear-gradient(to right, #DA3751, #ffc608); 
-    /* border: 0.2rem solid #ff8008; *
-    transform: translateX(0);
-} */
+    transform: translateX(1rem);
+}   
 
 .text-box .heading-primary-main,
 .text-box .heading-primary-sub {
     font-weight: bold;
 }
 
-section#home {
+/* section#home {
     background-color: #fff;
-}
+} */
 
 .menu-bars {
     top: 3rem;
@@ -773,7 +754,7 @@ section#about {
     margin-bottom: 3rem;
 }
 
-#contact .text-box {
+ #contact .text-box {
     margin: 0 auto;
     position: relative;
     top: 0;
@@ -842,42 +823,6 @@ nav li a {
     font-size: 1.8rem;
     line-height: 1.5;
 }
-
-/* Buttons Projects to UX process */
-
-/* .project-container .btn:link,
-.btn:visited {
-    /* border: 0.2rem solid #ff8008; *
-    background-image: linear-gradient(to right, #DA3751, #ffc608);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: 0.2rem solid #00000000;
-    border-image: linear-gradient(to right, #DA3751, #ffc608); 
-    border-image-slice: 1;
-} */
-
-/* .project-container .btn-text { */
-    /* transition: all 0.4s; */
-    /* border-color: #ff8008; */
-
-    /*     transition: all 0.4s;
-    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
-    background-size: 220%;
-    border: 0.2rem solid #ff8008;
-    -webkit-text-fill-color: #fff; */
-/* } */
-
-/* Button Projects txt color */
-/* .project-container .btn-text:hover {
-     transition: all 0.4s;
-    border-color: #ff8008;
-    transform: translateX(0); 
-    -webkit-text-fill-color: #fff;
-    background: linear-gradient(to right, #DA3751, #ffc608); 
-    
-    transform: translateX(0);
-
-}   */
 
 .project .project-container .area.image {
     margin-top: 20px;
@@ -1019,7 +964,6 @@ position: absolute;
 @media (max-width: 992px) {
     section {
         padding: 5rem 1.5rem;
-        height: auto;
     }
 
     .text-box {
