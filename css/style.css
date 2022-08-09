@@ -390,7 +390,7 @@ nav li:nth-of-type(1) {
 }
 
 nav li:nth-of-type(2) {
-    background-color: #d4f6fe;
+    background-color: #e7d8fc;
 }
 
 nav li:nth-of-type(3) {
@@ -398,7 +398,7 @@ nav li:nth-of-type(3) {
 }
 
 nav li:nth-of-type(4) {
-    background-color: #e7d8fc;
+    background-color: #d4f6fe;
 }
 
 nav li:nth-of-type(5) {
@@ -448,7 +448,7 @@ section#about {
 }
 
 section#project-one {
-    background-color: #d4f6fe;
+    background-color: #e7d8fc;
     height: auto;
     padding-bottom: 0;
 }
@@ -460,7 +460,7 @@ section#project-two {
 }
 
 section#project-three {
-    background-color: #e7d8fc;
+    background-color: #d4f6fe;
     height: auto;
     padding-bottom: 0;
 }
@@ -606,7 +606,8 @@ section#about {
 /* Hero & Projects to UX process Buttons on hover */
 .btn2:hover,
 .btn2:active {
-    /* background-position: 100%; */
+    background-position: 100%; 
+    /* Eventually remove bgd-pos to resolve mobile button issue? */
     border-color: #ff8008;
     background: linear-gradient(to right, #DA3751, #ffc608); 
     -webkit-text-fill-color: #fff;
@@ -1194,7 +1195,7 @@ position: absolute;
 
 #contact.project1 {
     justify-content: center;
-    background-color: #d4f6fe;
+    background-color: #e7d8fc;
 }
 
 #contact.project2 {
@@ -1202,7 +1203,7 @@ position: absolute;
 }
 
 #contact.project3 {
-    background-color: #e7d8fc;
+    background-color: #d4f6fe;
 }
 
 .back-to-top {
