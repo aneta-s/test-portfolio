@@ -606,7 +606,7 @@ section#about {
 /* Hero & Projects to UX process Buttons on hover */
 .btn2:hover,
 .btn2:active {
-    background-position: 100%;
+    /* background-position: 100%; */
     border-color: #ff8008;
     background: linear-gradient(to right, #DA3751, #ffc608); 
     -webkit-text-fill-color: #fff;
