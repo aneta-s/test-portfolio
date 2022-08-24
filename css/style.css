@@ -572,6 +572,7 @@ section#about {
     z-index: 1;
     padding: 1.5rem 4rem;
     cursor: pointer;
+    /* transition: margin-right 0.4s, another-prop 0.4s, yet-another-prop 0.4s; */
     transition: all 0.4s;
 }
 
@@ -596,7 +597,9 @@ section#about {
 .btn2 {
     background-image: linear-gradient(to right, #DA3751, #ffc608);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
+    color: transparent;
+    background-clip: text;
     border: 0.2rem solid #00000000;
     border-image: linear-gradient(to right, #DA3751, #ffc608); 
     border-image-slice: 1;
@@ -611,6 +614,7 @@ section#about {
     border-color: #ff8008;
     background: linear-gradient(to right, #DA3751, #ffc608); 
     -webkit-text-fill-color: #fff;
+    color: white;
     transform: translateX(1rem);
 }   
 
