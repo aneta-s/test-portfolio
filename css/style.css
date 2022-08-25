@@ -572,7 +572,6 @@ section#about {
     z-index: 1;
     padding: 1.5rem 4rem;
     cursor: pointer;
-    /* transition: margin-right 0.4s, another-prop 0.4s, yet-another-prop 0.4s; */
     transition: all 0.4s;
 }
 
@@ -597,9 +596,7 @@ section#about {
 .btn2 {
     background-image: linear-gradient(to right, #DA3751, #ffc608);
     -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
-    color: transparent;
-    background-clip: text;
+    -webkit-text-fill-color: transparent;
     border: 0.2rem solid #00000000;
     border-image: linear-gradient(to right, #DA3751, #ffc608); 
     border-image-slice: 1;
@@ -614,7 +611,6 @@ section#about {
     border-color: #ff8008;
     background: linear-gradient(to right, #DA3751, #ffc608); 
     -webkit-text-fill-color: #fff;
-    color: white;
     transform: translateX(1rem);
 }   
 
@@ -657,9 +653,9 @@ section#about {
   color: #fff;
 } */
 
-#about .zone.image {
-    /*  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;*/
-}
+/* #about .zone.image {
+     box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+} */
 /* About button */
 #about .btn:link,
 #about .btn:visited {
@@ -1143,7 +1139,7 @@ position: absolute;
     }
 
     #about .zone.image {
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
     }
 
     #contact .text-box .heading-primary-main {
