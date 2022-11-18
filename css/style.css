@@ -614,6 +614,21 @@ section#about {
     transform: translateX(1rem);
 }   
 
+.btn3 {
+    background-image: linear-gradient(to right, #DA3751, #ffc608);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+/* Hero & Projects to UX process Buttons on hover */
+.btn3:hover,
+.btn3:active {
+    background-position: 100%; 
+    -webkit-text-fill-color: linear-gradient(to right, #DA3751, #ffc608);
+    transform: translateX(1rem);
+}   
+
 .text-box .heading-primary-main,
 .text-box .heading-primary-sub {
     font-weight: bold;
