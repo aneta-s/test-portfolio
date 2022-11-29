@@ -41,9 +41,8 @@ $gray:#7b6828; */
 }
 
 /*to actually make the Navigation work (4) need to add and remove these classes to .overlay (JS file "Toggle: Menu Active")*/
-/*Slide In Animation of the NAV ITEMS with delay for each nav item https://developer.mozilla.org/en-US/docs/Web/CSS/animation
-Below Class for each animations for each item in Navigation
-    linear means it moves at an even speed, with delay of 0.2s, both fills backwords and forwards. 
+/* Slide In Animation of the NAV ITEMS with delay for each nav item https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+Below Class for each animations for each item in Navigation linear means it moves at an even speed, with delay of 0.2s, both fills backwords and forwards. 
 */
 .slide-in-1 {
     animation: slide-in 0.4s linear 0.2s both;
