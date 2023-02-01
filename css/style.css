@@ -579,7 +579,9 @@ section#about {
 
 /* About & Contact Buttons style */
 .btn1 {
-    border: 0.2rem solid #000;
+    /* border-style: solid #000;
+    border-width: 0.2rem;  LAST CHANGE 22.12 */
+    /* border: 0.2rem solid #000; */
     color: #000;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ff8008 50%);
     background-size: 220%;
@@ -601,6 +603,8 @@ section#about {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 0.2rem solid #00000000;
+    /* border-style: solid #000;
+    border-width: 0.2rem; LAST CHANGE 22.12*/
     border-image: linear-gradient(to right, #DA3751, #ffc608); 
     border-image-slice: 1;
 
