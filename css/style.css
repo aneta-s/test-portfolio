@@ -237,7 +237,7 @@ a {
     outline-offset: 2rem;
 }
 .zone > img:hover {
-    outline: 1.5rem solid #e7d8fc;
+    outline: 1.5rem solid #D4F6FE;
     transform: scale(1.05) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(25, 27, 19, 0.5);
     z-index: 20;
@@ -395,11 +395,11 @@ nav li:nth-of-type(2) {
 }
 
 nav li:nth-of-type(3) {
-    background-color: #fef1d6;
+    background-color: #E7D8FC;
 }
 
 nav li:nth-of-type(4) {
-    background-color: #e7d8fc;
+    background-color: #EFFDD8;
 }
 
 nav li:nth-of-type(5) {
@@ -455,13 +455,13 @@ section#project-one {
 }
 
 section#project-two {
-    background-color: #fef1d6;
+    background-color: #E7D8FC;
     height: auto;
     padding: 190px 0;
 }
 
 section#project-three {
-    background-color:  #e7d8fc;
+    background-color:  #EFFDD8;
     height: auto;
     padding-bottom: 0;
 }
