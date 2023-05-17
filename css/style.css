@@ -396,7 +396,7 @@ nav li:nth-of-type(2) {
 }
 
 nav li:nth-of-type(3) {
-    background-color: #E7D8FC;
+    background-color: #FEF1D6;
 }
 
 nav li:nth-of-type(4) {
@@ -456,7 +456,7 @@ section#project-one {
 }
 
 section#project-two {
-    background-color: #E7D8FC;
+    background-color: #FEF1D6;
     height: auto;
     padding: 190px 0;
 }
@@ -1219,7 +1219,7 @@ position: absolute;
 
 #contact.project1 {
     justify-content: center;
-    background-color: #e7d8fc;
+    background-color: #EFFDD8;
 }
 
 #contact.project2 {
